@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mi curriculum Vitae</title>
+    </head>
+    <body>
+        <div id="app">
+    
+        </div>
+    </body>
+</html>
