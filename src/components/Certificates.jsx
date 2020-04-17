@@ -1,14 +1,20 @@
 import React from 'react';
 
-const Certicates = () => (
-    <div className="Certicates">
-        <div className="Certicates-container">
-            <div className="Certicates-item">
-                <h3>Desarrollo Web</h3>
-                <p>Este es mi primer certificado</p>
-            </div>
+const Certificates = props => (
+    <div className="Certificates">
+        <div className="Certificates">
+
+        {props.data.map((cert, index) =>(
+             <div className="Certificates-item" key={`Certificates-${index}`}>
+                <h3>{cert.name}{cert.institution}
+                    <span>{cert.date}}</span>
+                </h3>
+             <p>{cert.description}</p>
+         </div>
+        ))}
+
         </div>
     </div>
 );
 
-export default Certicates;
+export default Certificates;

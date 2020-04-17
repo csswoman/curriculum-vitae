@@ -14,7 +14,6 @@ const Education = props => (
         ))}
 
         </div>
-
     </div>
 );
 
