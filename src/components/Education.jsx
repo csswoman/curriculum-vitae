@@ -9,7 +9,7 @@ const Education = props => (
                 <h3>{edu.degree}{edu.institution}
                     <span>{edu.startDate} - {edu.endDate}</span>
                 </h3>
-             <p>Programa de Facebook Developer Circles.</p>
+             <p>{edu.description}</p>
          </div>
         ))}
 
