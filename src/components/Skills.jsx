@@ -1,11 +1,16 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
+import H2Styled from '../styled/H2Styled';
 
 const SkillsContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grip-gap: 2rem;
+    grid-gap: 2rem;
     grid-row-gap: 0.5em;
+
+    @media only screen and (max-width : 767px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const SkillsH5 = styled.h5`
@@ -51,17 +56,18 @@ const SkillsSpan = styled.span`
 
 const Skills = props => (
     <div className="Skills">
-        <SkillsContainer>
-        {props.data.map ( (skill, index) => (
-            <div className="Skills-item" key={`Skills-${index}`}>
-                <SkillsH5>{skill.name}</SkillsH5>
-                <SkillsLine>
-                    <SkillsSpan width={skill.percentage} />
-                </SkillsLine>
-            </div>
+      <H2Styled name="Skills" />
+      <SkillsContainer>
+        {props.data.map((skill, index) => (
+          <div className='Skills-item' key={`Skills-${index}`}>
+            <SkillsH5>{skill.name}</SkillsH5>
+            <SkillsLine>
+              <SkillsSpan width={skill.percentage} />
+            </SkillsLine>
+          </div>
         ))}
-        </SkillsContainer>
+      </SkillsContainer>
     </div>
-);
+  );
 
 export default Skills;
