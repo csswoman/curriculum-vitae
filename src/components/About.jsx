@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 const AboutStyle = styled.div`
     text-align: center;
+  }
 `;
 
 const AboutAvatar = styled.div`
@@ -50,6 +51,7 @@ const AboutLocation = styled.p`
     font-size: 1em;
     font-weight: 400;
 `;
+
 
 const About = ({ avatar, name, profession, bio, address, social }) => (
     <AboutStyle>
